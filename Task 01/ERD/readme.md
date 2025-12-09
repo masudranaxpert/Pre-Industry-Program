@@ -3,6 +3,7 @@
 > ERD (Entity Relationship Diagram) হলো ডেটাবেস তৈরি করার আগে আঁকা একটা ম্যাপ বা নকশা (Blueprint)।
 <br>
 ---
+<br>
 #Video Link
 
 - [ER Diagram | Entity Relationship Diagram](https://www.youtube.com/watch?v=G0XffHxohqY)
