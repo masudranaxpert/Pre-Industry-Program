@@ -4,8 +4,7 @@
 <br>
 ---
 <br>
-#Video Link
-
+# Video Link
 - [ER Diagram | Entity Relationship Diagram](https://www.youtube.com/watch?v=G0XffHxohqY)
 - [Symbols of ER Diagram](https://www.youtube.com/watch?v=S4cBelRt2D8)
 - [Types of Entity | Strong Entity | Weak Entity](https://www.youtube.com/watch?v=3ia2B7W2ETY)
