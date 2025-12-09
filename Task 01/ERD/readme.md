@@ -4,16 +4,17 @@
 <br>
 ---
 #Video Link
-[ER Diagram | Entity Relationship Diagram](https://www.youtube.com/watch?v=G0XffHxohqY)
-[Symbols of ER Diagram](https://www.youtube.com/watch?v=S4cBelRt2D8)
-[Types of Entity | Strong Entity | Weak Entity](https://www.youtube.com/watch?v=3ia2B7W2ETY)
-[Types of Attributes](https://www.youtube.com/watch?v=79XdTzaD7XI)
-[Types of Relationship](https://www.youtube.com/watch?v=jHRfpEdNKQs)
-[Types of Relationship | One to Many | Many to One](https://www.youtube.com/watch?v=-f9jsqA3-IU)
-[Types of Relationship | Many to Many](https://www.youtube.com/watch?v=yCxixT7476g)
-[Participation Constraints](https://www.youtube.com/watch?v=-t63uwNJNJw)
-[Degree of Relationship](https://www.youtube.com/watch?v=gpcnyLSoppk)
-[Relational Model](https://www.youtube.com/watch?v=lbTiI2KZVBQ)
+
+- [ER Diagram | Entity Relationship Diagram](https://www.youtube.com/watch?v=G0XffHxohqY)
+- [Symbols of ER Diagram](https://www.youtube.com/watch?v=S4cBelRt2D8)
+- [Types of Entity | Strong Entity | Weak Entity](https://www.youtube.com/watch?v=3ia2B7W2ETY)
+- [Types of Attributes](https://www.youtube.com/watch?v=79XdTzaD7XI)
+- [Types of Relationship](https://www.youtube.com/watch?v=jHRfpEdNKQs)
+- [Types of Relationship | One to Many | Many to One](https://www.youtube.com/watch?v=-f9jsqA3-IU)
+- [Types of Relationship | Many to Many](https://www.youtube.com/watch?v=yCxixT7476g)
+- [Participation Constraints](https://www.youtube.com/watch?v=-t63uwNJNJw)
+- [Degree of Relationship](https://www.youtube.com/watch?v=gpcnyLSoppk)
+- [Relational Model](https://www.youtube.com/watch?v=lbTiI2KZVBQ)
 
 ---
 
