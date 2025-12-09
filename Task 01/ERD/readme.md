@@ -64,7 +64,7 @@ Email (ইমেইল)
 ----
 <br>
 
-[![image.png](https://i.postimg.cc/gJY5Sfdf/image.png)](https://postimg.cc/1gjJ478H)
+[![image.png](https://res.cloudinary.com/dxrdnpp47/image/upload/v1765295929/image_z79ukc.png)]
 
 
 
