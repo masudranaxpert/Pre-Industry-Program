@@ -17,8 +17,8 @@
 - [Types of Relationship](https://www.youtube.com/watch?v=jHRfpEdNKQs)
 - [Types of Relationship | One to Many | Many to One](https://www.youtube.com/watch?v=-f9jsqA3-IU)
 - [Types of Relationship | Many to Many](https://www.youtube.com/watch?v=yCxixT7476g)
-- [Participation Constraints](https://www.youtube.com/watch?v=-t63uwNJNJw)
 - [Degree of Relationship](https://www.youtube.com/watch?v=gpcnyLSoppk)
+- [Participation Constraints](https://www.youtube.com/watch?v=-t63uwNJNJw)
 - [Relational Model](https://www.youtube.com/watch?v=lbTiI2KZVBQ)
 
 ---
@@ -72,6 +72,16 @@ Email (ইমেইল)
 
 
 
+
+<br><br><br>
+
+# Types of Constraints
+
+## Primary Key
+  > Not NULL & Must be Unique
+
+##Foreign Key
+  > অন্য টেবিলের Primary Key কে Reference করার জন্য ব্যবহৃত হয়।
 
 <br><br><br>
 
@@ -155,6 +165,8 @@ Email (ইমেইল)
 
 ![Types of Relationship](https://res.cloudinary.com/dxrdnpp47/image/upload/v1765342207/Screenshot_25_ddiy31.png)
 
+<br>
+
 - **One to One**
   > দুইটা entity-তেই Primary Key থাকে, কিন্তু তাদের মধ্যে একটি টেবিলের PK অন্যটির FK হয়।
   ![One to One](https://res.cloudinary.com/dxrdnpp47/image/upload/v1765342207/Screenshot_24_ikejsp.png)
@@ -166,4 +178,78 @@ Email (ইমেইল)
   >দুইটা entity-তেই Primary Key থাকে, কিন্তু “Many” টেবিলের FK → “One” টেবিলের PK কে রেফার করে, এবং অনেকগুলো রেকর্ড একই একটি PK কে রেফার করতে পারে।
   
   ![One to Many](https://res.cloudinary.com/dxrdnpp47/image/upload/v1765342818/Screenshot_26_b0phh3.png)
-  
+
+- **Many to Many**
+  >দুইটা entity-তেই Primary Key থাকে, কিন্তু তারা সরাসরি যুক্ত থাকে না; একটি আলাদা “Junction / Bridge টেবিল” লাগে, যেখানে দুই টেবিলের PK গুলো FK হিসেবে থাকে।
+  ![Many to Many](https://res.cloudinary.com/dxrdnpp47/image/upload/v1765344584/Screenshot_27_siaqz2.png)
+
+<br>
+
+## Degree of Relationship
+
+  > একটা Relationship এ কত ধরনের Entity Add হইতেছে ।
+  > Relation-যত গুলো Entity = Degree
+
+- **Types**
+  - Unary (1 টা Entity)
+  - Binary (2 টা Differnet Type Entity)
+  - Ternary (3 টা Differnet Type Entity)
+  - N-ary (n টা Differnet Type Entity)
+
+![Degree](https://res.cloudinary.com/dxrdnpp47/image/upload/v1765345164/Screenshot_28_dqczpa.png)
+
+<br>
+
+##Participation Constraints
+
+  > Relationship এ Entity Participation করবে নাকি করবে না
+  > যদি করে তাহলে Total Participation নাকি Partial Participation হবে।
+
+  ![Participation](https://res.cloudinary.com/dxrdnpp47/image/upload/v1765345753/Screenshot_29_e5s1xz.png)
+
+<br>
+
+# Relational Model
+
+### Example Relation
+
+| Student_id | Name | Dept. |
+| :--- | :---: | :---: |
+| 101 | A | - |
+| 102 | B | - |
+| 103 | C | - |
+| 104 | D | - |
+| 105 | E | - |
+
+## Components
+1. **Relation**  
+   > Tabular format (rows and columns)
+
+2. **Tuple**  
+   > Each Row
+
+3. **Attribute**  
+   > Each Column
+
+4. **Attribute Domain**  
+   > Each Column Data Type
+
+5. **Degree**  
+   > Total Number of Attributes
+
+6. **Cardinality**  
+   > Total Number of Rows
+
+7. **Relational Schema**  
+   > Logical Represent | `tablename(attribute1, attribute2, ..., attributeN)`
+
+8. **Relational Instance**  
+   > Table-এর current data / rows
+
+9. Relation Key
+    - Primary key
+    - Foreign key
+    - Super key
+    - Candidate key
+    - Composite key
+    - Alternate key
