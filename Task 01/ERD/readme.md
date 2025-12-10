@@ -97,11 +97,11 @@ Email (ইমেইল)
 ## Types of Entity
 
 - **Strong Entity**
-  > যার Primary Key আছে।  
+  > যার Primary Key আছে।    
   > Strong Entity represent করি আমরা Single Rectangle দিয়ে।
 
 - **Weak Entity**
-  > যার Primary Key নাই।  
+  > যার Primary Key নাই।    
   > Weak Entity represent করি আমরা Double Rectangle দিয়ে।
 
 
@@ -111,7 +111,7 @@ Email (ইমেইল)
 
 ![Entity Example](https://res.cloudinary.com/dxrdnpp47/image/upload/v1765338779/Screenshot_21_jcvhpp.png)
 
-  > Strong Entity তে যেই Primary Key থাকবে তা Weak Entity তে Foreign Key বা Reference Key হিসেবে ব্যবহার হবে।
+  > Strong Entity তে যেই Primary Key থাকবে তা Weak Entity তে Foreign Key বা Reference Key হিসেবে ব্যবহার হবে।  
   > অর্থাৎ Strong Entity Weak Entity এর উপর Dependent.
 
 <br>
@@ -144,7 +144,7 @@ Email (ইমেইল)
 
 **Derived Attributes**
 
-  > যে Attributes এর Value আমরা অন্য Attributes এর সাহায্য পেয়ে থাকি ।
+  > যে Attributes এর Value আমরা অন্য Attributes এর সাহায্য পেয়ে থাকি ।  
   > Date of Birth থেকে আমরা Age পেয়ে থাকি ।
 
 **Key Attributes**
@@ -250,13 +250,14 @@ Email (ইমেইল)
 9. Relation Key
     - Primary key
     - Foreign key
-    - Super key
-       >  {StudentID} ✅
-       >  {RollNo} ✅
-       >  {StudentID, Name} ✅
-    - Candidate key
-       >   {StudentID} ✅
-       >   {RollNo} ✅
-       >   {StudentID, Name} ❌
+    - **Super Key**
+      > {StudentID} ✅  
+      > {RollNo} ✅  
+      > {StudentID, Name} ✅
+    
+    - **Candidate Key**
+      > {StudentID} ✅  
+      > {RollNo} ✅  
+      > {StudentID, Name} ❌
     - Composite key
     - Alternate key
