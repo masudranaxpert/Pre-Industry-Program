@@ -201,9 +201,9 @@ Email (ইমেইল)
 
 <br>
 
-##Participation Constraints
+## Participation Constraints
 
-  > Relationship এ Entity Participation করবে নাকি করবে না
+  > Relationship এ Entity Participation করবে নাকি করবে না  
   > যদি করে তাহলে Total Participation নাকি Partial Participation হবে।
 
   ![Participation](https://res.cloudinary.com/dxrdnpp47/image/upload/v1765345753/Screenshot_29_e5s1xz.png)
