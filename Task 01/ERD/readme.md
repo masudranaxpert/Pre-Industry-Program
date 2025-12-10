@@ -255,8 +255,8 @@ Email (ইমেইল)
        >  {RollNo} ✅
        >  {StudentID, Name} ✅
     - Candidate key
-       >  {StudentID} ✅
-       >  {RollNo} ✅
-       >  {StudentID, Name} ❌
+       >   {StudentID} ✅
+       >   {RollNo} ✅
+       >   {StudentID, Name} ❌
     - Composite key
     - Alternate key
