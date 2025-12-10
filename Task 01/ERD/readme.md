@@ -96,5 +96,10 @@ Email (ইমেইল)
 
 ![Entity](https://res.cloudinary.com/dxrdnpp47/image/upload/v1765338379/Screenshot_20_cq7gm5.png)
 
+<br>
 
+![Entity Example](https://res.cloudinary.com/dxrdnpp47/image/upload/v1765338779/Screenshot_21_jcvhpp.png)
+
+>Strong Entity তে যেই Primary Key থাকবে তা Weak Entity তে Foreign Key বা Reference Key হিসেবে ব্যবহার হবে।
+>অর্থাৎ Strong Entity Weak Entity এর উপর Dependent.
 
