@@ -27,13 +27,13 @@
 
 
 ```
-১. ER Model (Entity Relationship Model) কী?
+১. ER Model (Entity Relationship Model) --->
 
-Entity (এনটিটি): যার সম্পর্কে আমরা তথ্য রাখি।
+Entity : যার সম্পর্কে আমরা তথ্য রাখি।
 
-Attribute (অ্যাট্রিবিউট): Entity বৈশিষ্ট্য।
+Attribute : Entity বৈশিষ্ট্য।
 
-Relationship (রিলেশনশিপ): দুটি Entity মধ্যে সম্পর্ক।
+Relationship : দুটি Entity মধ্যে সম্পর্ক।
 
 ```
 
@@ -80,7 +80,7 @@ Email (ইমেইল)
 ## Primary Key
   > Not NULL & Must be Unique
 
-##Foreign Key
+## Foreign Key
   > অন্য টেবিলের Primary Key কে Reference করার জন্য ব্যবহৃত হয়।
 
 <br><br><br>
@@ -88,7 +88,7 @@ Email (ইমেইল)
 ----
 
 <br>
-
+<h2 align="center">Entity Relationship Diagram Symbols </h2>
 ![image.png](https://res.cloudinary.com/dxrdnpp47/image/upload/v1765295929/image_z79ukc.png)
 
 <br>
