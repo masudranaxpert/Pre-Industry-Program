@@ -251,12 +251,12 @@ Email (ইমেইল)
     - Primary key
     - Foreign key
     - Super key
-       > {StudentID} ✅
-       > {RollNo} ✅
-       > {StudentID, Name} ✅
+       >  {StudentID} ✅
+       >  {RollNo} ✅
+       >  {StudentID, Name} ✅
     - Candidate key
-       > {StudentID} ✅
-       > {RollNo} ✅
-       > {StudentID, Name} ❌
+       >  {StudentID} ✅
+       >  {RollNo} ✅
+       >  {StudentID, Name} ❌
     - Composite key
     - Alternate key
