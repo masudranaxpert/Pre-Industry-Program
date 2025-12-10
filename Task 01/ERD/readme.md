@@ -100,6 +100,53 @@ Email (ইমেইল)
 
 ![Entity Example](https://res.cloudinary.com/dxrdnpp47/image/upload/v1765338779/Screenshot_21_jcvhpp.png)
 
->Strong Entity তে যেই Primary Key থাকবে তা Weak Entity তে Foreign Key বা Reference Key হিসেবে ব্যবহার হবে।
->অর্থাৎ Strong Entity Weak Entity এর উপর Dependent.
+  > Strong Entity তে যেই Primary Key থাকবে তা Weak Entity তে Foreign Key বা Reference Key হিসেবে ব্যবহার হবে।
+  > অর্থাৎ Strong Entity Weak Entity এর উপর Dependent.
 
+<br>
+
+## Types of Attributes
+
+- Simple Attributes
+- Composite Attributes
+- Single valued Attributes
+- Multivalued Attributes
+- Derived Attributes
+- Key Attributes
+- Stored Attributes
+
+**Simple Attributes**
+
+  > যেই Attributes কে ভাঙা যাবে না। 
+
+**Composite Attributes**
+
+  > যেই Attributes কে ভাঙা যাবে।
+
+**Single valued Attributes**
+
+  >  যাদের শুধুমাত্র একটা মাত্র Value হবে।
+
+**Multivalued Attributes**
+
+  >  যাদের একের অধিক Value হবে।
+
+**Derived Attributes**
+
+  > যে Attributes এর Value আমরা অন্য Attributes এর সাহায্য পেয়ে থাকি ।
+  > Date of Birth থেকে আমরা Age পেয়ে থাকি ।
+
+**Key Attributes**
+
+  >  যদি কোন Entity এর এমন কোন Attributes থাকে যার মাধ্যমে প্রত্যেকটা Row কে Uniquely Identify করা যায়।
+
+**Stored Attributes**
+
+  > যে Attributes এর Value Fixed
+
+<br>
+
+![1st](https://res.cloudinary.com/dxrdnpp47/image/upload/v1765340191/Screenshot_23_dyi9t5.png)
+![2nd](https://res.cloudinary.com/dxrdnpp47/image/upload/v1765340191/Screenshot_22_f5si2e.png)
+
+<br>
