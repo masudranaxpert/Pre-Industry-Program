@@ -150,3 +150,20 @@ Email (ইমেইল)
 ![2nd](https://res.cloudinary.com/dxrdnpp47/image/upload/v1765340191/Screenshot_22_f5si2e.png)
 
 <br>
+
+## Types of Relationship 
+
+![Types of Relationship](https://res.cloudinary.com/dxrdnpp47/image/upload/v1765342207/Screenshot_25_ddiy31.png)
+
+- **One to One**
+  > দুইটা entity-তেই Primary Key থাকে, কিন্তু তাদের মধ্যে একটি টেবিলের PK অন্যটির FK হয়।
+  ![One to One](https://res.cloudinary.com/dxrdnpp47/image/upload/v1765342207/Screenshot_24_ikejsp.png)
+
+- **One to Many**
+  > দুইটা entity-তেই Primary Key থাকে, কিন্তু One টেবিলের PK → Many টেবিলে FK হয় এবং একই PK অনেকবার ব্যবহার হতে পারে।
+
+- **Many to One**
+  >দুইটা entity-তেই Primary Key থাকে, কিন্তু “Many” টেবিলের FK → “One” টেবিলের PK কে রেফার করে, এবং অনেকগুলো রেকর্ড একই একটি PK কে রেফার করতে পারে।
+  
+  ![One to Many](https://res.cloudinary.com/dxrdnpp47/image/upload/v1765342818/Screenshot_26_b0phh3.png)
+  
