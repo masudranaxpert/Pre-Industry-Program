@@ -21,7 +21,6 @@
 - [Participation Constraints](https://www.youtube.com/watch?v=-t63uwNJNJw)
 - [Relational Model](https://www.youtube.com/watch?v=lbTiI2KZVBQ)
 
----
 
 <br><br><br>
 
@@ -88,7 +87,9 @@ Email (ইমেইল)
 ----
 
 <br>
+
 <h2 align="center">Entity Relationship Diagram Symbols </h2>
+
 ![image.png](https://res.cloudinary.com/dxrdnpp47/image/upload/v1765295929/image_z79ukc.png)
 
 <br>
@@ -250,6 +251,12 @@ Email (ইমেইল)
     - Primary key
     - Foreign key
     - Super key
+       > {StudentID} ✅
+       > {RollNo} ✅
+       > {StudentID, Name} ✅
     - Candidate key
+       > {StudentID} ✅
+       > {RollNo} ✅
+       > {StudentID, Name} ❌
     - Composite key
     - Alternate key
