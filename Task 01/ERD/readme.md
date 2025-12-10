@@ -82,14 +82,17 @@ Email (ইমেইল)
 ![image.png](https://res.cloudinary.com/dxrdnpp47/image/upload/v1765295929/image_z79ukc.png)
 
 <br>
-#Type of Entity
 
--Strong Entity
->যার Primary Key আছে।
->Strong Entity Represent করি আমরা Single Rectangle দিয়ে। 
--Weak Entity
-> যার Primary Key নাই।
->Weak Entity Represent করি আমরা Double Rectangle দিয়ে।
+## Types of Entity
+
+- **Strong Entity**
+  > যার Primary Key আছে।  
+  > Strong Entity represent করি আমরা Single Rectangle দিয়ে।
+
+- **Weak Entity**
+  > যার Primary Key নাই।  
+  > Weak Entity represent করি আমরা Double Rectangle দিয়ে।
+
 
 ![Entity](https://res.cloudinary.com/dxrdnpp47/image/upload/v1765338379/Screenshot_20_cq7gm5.png)
 
