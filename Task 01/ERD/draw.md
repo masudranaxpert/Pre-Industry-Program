@@ -4,6 +4,8 @@
 
 <br>
 
+
 # E-commerce ERD
 
-![Symbols](https://res.cloudinary.com/dxrdnpp47/image/upload/v1766248777/E-commerce_ERD_rwk5qm.png)
+
+![ERD](https://res.cloudinary.com/dxrdnpp47/image/upload/v1766248777/E-commerce_ERD_rwk5qm.png)
