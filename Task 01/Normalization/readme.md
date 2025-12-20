@@ -4,6 +4,7 @@
 - [Normalization](https://www.youtube.com/watch?v=aZxGX65Uivc)
 
 <br>
+
 ## Redundancy
 > একই ধরনের ডাটা বা Duplicate Value যদি একটা টেবিলে Multiple থাকে সেইটা হলো Redundancy.
   
