@@ -8,4 +8,4 @@
 # E-commerce ERD
 
 
-![ERD](https://res.cloudinary.com/dxrdnpp47/image/upload/v1766251215/E-commerce_ERD_dwoggj.png)
+![ERD](https://res.cloudinary.com/dxrdnpp47/image/upload/v1766251321/E-commerce_ERD_1_dxqigf.png)
