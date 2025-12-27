@@ -99,9 +99,9 @@ mysite/                  ← তোমার প্রজেক্টের ম�
 
 <br>
 
-##  settings.py
-project এর configuration
-Database connection, installed apps, security settingsে
+# settings.py  কী?
+> project এর configuration  
+> Database connection, installed apps, security settings  
 
 - DEBUG = True/False - Development mode
 - INSTALLED_APPS - কোন apps use হবে
