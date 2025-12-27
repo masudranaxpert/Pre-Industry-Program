@@ -20,6 +20,26 @@ Django নিজে থেকে সেগুলোকে SQL-এ কনভা�
 > Model-View-Template  
 > MVT → Model (ডাটা), View (লজিক), Template (ডিজাইন) – এই তিন অংশে কাজ ভাগ করে নেয়।
 
+## Model
+
+- কি: Database এর structure
+- কাজ: Data কিভাবে save হবে, কি ধরনের data হবে
+- উদাহরণ: User table, Product table
+- ফাইল: models.py
+
+## View
+
+- কি: Business logic
+- কাজ: User এর request process করা, database থেকে data নিয়ে আসা
+- উদাহরণ: Login করলে user verify করা, product list দেখানো
+- ফাইল: views.py
+
+## Template
+
+- কি: Presentation layer (যা user দেখে)
+- কাজ: Data কে HTML format এ দেখানো
+- উদাহরণ: Homepage, Product details page
+- ফোল্ডার: templates/
 
 
 # django-admin কী?
