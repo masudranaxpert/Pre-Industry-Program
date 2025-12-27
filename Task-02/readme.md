@@ -98,3 +98,33 @@ mysite/                  ← তোমার প্রজেক্টের ম�
 > Django-এর Python shell খোলে – মডেল দিয়ে এক্সপেরিমেন্ট করা যায়: ``` python manage.py shell ```    
 
 <br>
+
+##  settings.py
+project এর configuration
+Database connection, installed apps, security settingsে
+
+- DEBUG = True/False - Development mode
+- INSTALLED_APPS - কোন apps use হবে
+- DATABASES - Database connection info
+- TEMPLATES - HTML template settings
+- STATIC_URL - CSS/JS files এর location
+
+<br>
+
+
+নতুন অ্যাপ বানানো: ``` python manage.py startapp todo ```
+
+```
+├── todo/                  # Individual App Directory
+│   ├── __init__.py
+│   ├── admin.py            # Admin panel customization
+│   ├── apps.py             # App configuration
+│   ├── models.py           # Database models (tables)
+│   ├── views.py            # Logic এবং data processing
+│   ├── urls.py             # App specific URLs
+│   ├── tests.py            # Testing code
+│   ├── migrations/         # Database changes history
+│   ├── templates/          # HTML files
+│   └── static/             # CSS, JS, images
+```
+
