@@ -103,14 +103,26 @@ mysite/                  ← তোমার প্রজেক্টের ম�
 > project এর configuration  
 > Database connection, installed apps, security settings  
 
-- DEBUG = True/False - Development mode
-- INSTALLED_APPS - কোন apps use হবে
-- DATABASES - Database connection info
-- TEMPLATES - HTML template settings
-- STATIC_URL - CSS/JS files এর location
+```
+DEBUG = True/False - Development mode
+INSTALLED_APPS - কোন apps use হবে
+DATABASES - Database connection info
+TEMPLATES - HTML template settings
+STATIC_URL - CSS/JS files এর location
+```
 
 <br>
 
+# admin.py
+
+- Django admin panel customize করা
+- Admin panel থেকে data সহজে manage করার জন্য
+
+```
+admin.site.register(Blog)
+```
+
+<br>
 
 নতুন অ্যাপ বানানো: ``` python manage.py startapp todo ```
 
