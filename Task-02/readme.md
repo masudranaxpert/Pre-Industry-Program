@@ -43,6 +43,26 @@ Django নিজে থেকে সেগুলোকে SQL-এ কনভা�
 
 <br>
 
+```
+User Request (Browser)
+        ↓
+    urls.py (URL Routing)
+        ↓
+    views.py (Logic Processing)
+        ↓
+    models.py (Database Query)
+        ↓
+    Database (Data Fetch)
+        ↓
+    views.py (Data Processing)
+        ↓
+    templates/ (HTML Rendering)
+        ↓
+    Response (Browser এ দেখানো)
+```
+
+<br>
+
 # django-admin কী?
 > django-admin হলো Django-এর একটা কমান্ড লাইন টুল।
 > Django-তে কোনো ওয়েবসাইট/অ্যাপ বানানোর প্রথম স্টেপ হলো একটা প্রজেক্ট বানানো।
