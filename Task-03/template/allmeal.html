@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %} All Meal {% endblock title %} 
+{% block body %}
+<div class='flex flex-col items-center space-y-4 mt-10 mb-10'>
+{% for meal in allmeal %}
+    <div class='relative text-black border shadow-sm bg-gray-100 p-4 rounded-lg md:w-[500px]'>
+        <h1><strong class='text-lg font-bold'>Meal Name:</strong> {{ meal.meal_name }}</h1>
+        <h3><strong class='text-lg font-bold'>Price:</strong> {{ meal.meal_price }}</h3>
+        <form action="" method="POST">
+            <div class='absolute right-4 bottom-2 bg-red-500 px-2 py-1 rounded-lg 
+            cursor-pointer text-white font-semibold'>
+                Delete
+            </div>
+        </form>
+    </div>
+    
+{% endfor %}
+</div>
+
+<div class="flex flex-row justify-center items-center gap-4 mt-10">
+    <div class="bg-green-500 text-white px-5 py-2 shadow-md rounded-full text-lg font-bold border-2 border-white whitespace-nowrap">
+        Total Price: {{ total }}
+    </div>
+
+    <a href="{% url 'home' %}" class="bg-gray-400 text-white px-6 py-2 rounded-lg font-semibold hover:bg-gray-500 transition shadow-sm">
+        Back
+    </a>
+</div>
+{% endblock body %}

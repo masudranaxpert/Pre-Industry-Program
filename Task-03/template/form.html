@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% block title %} Form Submit {% endblock title %} 
+{% block body %}
+    <div class='h-screen flex flex-col items-center mt-8'>
+        <form class=' space-y-4' action="" method="POST">
+            {% csrf_token %}
+            <div>
+                <label class="text-lg font-semibold text-gray-900">Meal Name:</label>
+                {% render_field form.meal_name class='text-lg border-2 border-gray-400 rounded-sm w-40 px-2 py-1 focus:border-green-500 placeholder:text-green-500 transition-all outline-none md:w-96' placeholder='Meal Name....' %}
+            </div>
+            <div>
+                <label class="text-lg font-semibold text-gray-900">Meal Price:</label>
+                {% render_field form.meal_price class='text-lg border-2 border-gray-400 rounded-sm w-40 px-2 py-1 focus:border-green-500 placeholder:text-green-500 transition-all outline-none' placeholder='Meal Price....' %}
+            </div>
+            <div>
+                <label class="text-lg font-semibold text-gray-900">Date:</label>
+                {% render_field form.date class='text-lg border-2 border-gray-400 rounded-sm w-40 px-2 py-1 focus:border-green-500 placeholder:text-green-500 transition-all outline-none' placeholder='Meal Price....' type='date' %}
+            </div>
+
+            <div>
+                <button class=' mx-auto px-3 py-2 bg-green-400
+                rounded-lg text-white text-lg font-semibold cursor-pointer
+                mt-5 mr-5' type="Submit">Submit</button>
+
+                <a href="{% url 'home' %}" class="inline-block px-4 py-3
+                 bg-gray-400 rounded-lg text-white font-semibold">
+                    Back
+                </a>
+            </div>
+
+            
+        </form>
+    </div>
+{% endblock body %}
+
