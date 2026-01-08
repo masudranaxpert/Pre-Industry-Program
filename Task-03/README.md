@@ -75,18 +75,35 @@ The **Meal Management System** is a comprehensive Django web application designe
 4. Click **Submit**
 5. You'll be redirected to a thank you page
 
+<p align="center">
+  <img src="https://res.cloudinary.com/dxrdnpp47/image/upload/v1767858155/Screenshot_34_wohwry.png" width="600" height="338" />
+</p>
+
+<br>
+
 ### Viewing Statistics
 - **Daily Total**: Displayed on the home page (yellow card)
 - **Overall Total**: Displayed on the home page (green card)
 - Both statistics update automatically based on database records
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dxrdnpp47/image/upload/v1767858154/Screenshot_33_sgrcjc.png" width="600" height="338" />
+</p>
+
+<br>
 
 ### Viewing All Meals
 1. Click on the **"All Meal"** button from the home page
 2. Browse through all recorded meals
 3. View total expenses at the bottom
 
+<p align="center">
+  <img src="https://res.cloudinary.com/dxrdnpp47/image/upload/v1767858155/Screenshot_35_no28nn.png" width="600" height="338" />
+</p>
+
 ---
 
 
 **Made with ❤️ Masud Rana**
+
 
