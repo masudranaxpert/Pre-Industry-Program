@@ -2,9 +2,17 @@
 
 A Django-based web application for tracking and managing daily meal expenses with real-time statistics and reporting.
 
+<p align="center">
+  <img src="https://res.cloudinary.com/dxrdnpp47/image/upload/v1767857170/Gemini_Generated_Image_4bgbsh4bgbsh4bgb_ymh5qc.png" width="600"/>
+</p>
+
+
 ## 🎯 Overview
 
 The **Meal Management System** is a comprehensive Django web application designed to help users track their daily meal expenses. It provides an intuitive interface for adding meals, viewing historical data, and analyzing spending patterns with real-time statistics.
+
+
+
 
 ## This application is perfect for:
 - 🏠 Hostels and dormitories
@@ -53,6 +61,9 @@ The **Meal Management System** is a comprehensive Django web application designe
 ---
 
 ## 💡 Usage
+<p align="center">
+  <img src="https://res.cloudinary.com/dxrdnpp47/image/upload/v1767857740/1st_cwog7d.gif" width="600" />
+</p>
 
 ### Adding a Meal
 1. Navigate to the home page
@@ -78,3 +89,4 @@ The **Meal Management System** is a comprehensive Django web application designe
 
 
 **Made with ❤️ Masud Rana**
+
