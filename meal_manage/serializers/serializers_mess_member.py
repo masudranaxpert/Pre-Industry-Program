@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Mess, MessMember
+from meal_manage.models import Mess, MessMember
 
 from django.contrib.auth.models import User
 
@@ -42,7 +42,7 @@ class UserSerializer(serializers.ModelSerializer):
 class MessMemberSerializer(serializers.ModelSerializer):
     user = UserSerializer()
     role = serializers.SerializerMethodField()
-    
+
     class Meta:
         model = MessMember
         fields = ('id' ,'mess', 'user', 'status', 'role')

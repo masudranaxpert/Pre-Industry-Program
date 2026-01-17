@@ -4,7 +4,7 @@ from rest_framework.exceptions import ValidationError
 from rest_framework.response import Response
 from rest_framework import status
 
-from meal_manage.serializers import MessSerializer, MessMemberSerializer, MesMemberWriteSerializer
+from meal_manage.serializers.serializers_mess_member import MessSerializer, MessMemberSerializer, MesMemberWriteSerializer
 from meal_manage.models import Mess, MessMember
 
 class MessView(mixins.ListModelMixin, mixins.CreateModelMixin,
@@ -37,7 +37,7 @@ class MessView(mixins.ListModelMixin, mixins.CreateModelMixin,
         if instance.manager == self.request.user:
             instance.delete()
         else:
-            raise ValidationError("Not Permited")
+            raise ValidationError("You are not permitted to perform this action.")
 
 
 
