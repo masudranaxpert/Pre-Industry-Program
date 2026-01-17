@@ -55,7 +55,7 @@ class DailyMeal(models.Model):
     member = models.ForeignKey(
         MessMember,
         on_delete=models.SET_NULL,
-        related_name='deposits',
+        related_name='meal',
         null=True, blank=True
     )
     breakfast = models.FloatField(validators=[

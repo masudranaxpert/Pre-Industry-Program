@@ -3,6 +3,7 @@ from rest_framework.viewsets import GenericViewSet
 from rest_framework.exceptions import ValidationError
 from rest_framework.response import Response
 from rest_framework import status
+from rest_framework.permissions import IsAuthenticated
 
 from meal_manage.serializers.serializers_mess_member import MessSerializer, MessMemberSerializer, MesMemberWriteSerializer
 from meal_manage.models import Mess, MessMember
@@ -11,6 +12,7 @@ class MessView(mixins.ListModelMixin, mixins.CreateModelMixin,
                mixins.DestroyModelMixin, mixins.UpdateModelMixin, GenericViewSet):
     queryset = Mess.objects.all()
     serializer_class = MessSerializer
+    permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
         user = self.request.user
@@ -46,6 +48,7 @@ class AddMember(GenericViewSet, mixins.CreateModelMixin,
                 mixins.UpdateModelMixin, mixins.DestroyModelMixin):
     queryset = MessMember.objects.all()
     serializer_class = MesMemberWriteSerializer
+    permission_classes = [IsAuthenticated]
 
     def destroy(self, request, *args, **kwargs):
         instance = self.get_object()
@@ -62,6 +65,7 @@ class AddMember(GenericViewSet, mixins.CreateModelMixin,
 class Member(GenericViewSet, mixins.ListModelMixin):
     queryset = MessMember.objects.all()
     serializer_class = MessMemberSerializer
+    permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
         user = self.request.user

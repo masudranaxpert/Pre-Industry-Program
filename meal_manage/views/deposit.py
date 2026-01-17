@@ -1,6 +1,7 @@
 from rest_framework import mixins
 from rest_framework.viewsets import GenericViewSet
 from rest_framework.exceptions import ValidationError
+from rest_framework.permissions import IsAuthenticated
 
 from meal_manage.models import Deposit, MessMember
 from meal_manage.serializers.serializers_deposit import DepositSerializers
@@ -10,6 +11,7 @@ class DepositView(GenericViewSet, mixins.ListModelMixin,
                   mixins.CreateModelMixin):
     queryset = Deposit.objects.all()
     serializer_class = DepositSerializers
+    permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
         member = MessMember.objects.filter(user=self.request.user)
