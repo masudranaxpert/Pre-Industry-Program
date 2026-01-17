@@ -6,7 +6,10 @@ from rest_framework.permissions import IsAuthenticated
 from meal_manage.models import Deposit, MessMember
 from meal_manage.serializers.serializers_deposit import DepositSerializers
 
+from drf_spectacular.utils import extend_schema
 
+
+@extend_schema(tags=['Deposit'])
 class DepositView(GenericViewSet, mixins.ListModelMixin,
                   mixins.CreateModelMixin):
     queryset = Deposit.objects.all()

@@ -5,7 +5,9 @@ from rest_framework.exceptions import ValidationError
 from meal_manage.models import DailyMeal, MessMember
 from meal_manage.serializers.serializers_meal import MealSerializers
 
+from drf_spectacular.utils import extend_schema
 
+@extend_schema(tags=['Meal'])
 class MealView(GenericViewSet, mixins.ListModelMixin, mixins.CreateModelMixin):
     queryset = DailyMeal.objects.all()
     serializer_class = MealSerializers

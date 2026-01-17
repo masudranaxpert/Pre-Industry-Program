@@ -39,9 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'accounts',
     'meal_manage',
+
+    #Third Party Library
     'rest_framework',
     'rest_framework.authtoken',
-    'drf_yasg',
+    'drf_spectacular',
 ]
 
 MIDDLEWARE = [
@@ -125,18 +127,21 @@ REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": [
         "rest_framework.authentication.TokenAuthentication",
     ],
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
 
 
 
-SWAGGER_SETTINGS = {
-    'USE_SESSION_AUTH': False,
-    'SECURITY_DEFINITIONS': {
-        'Token': {
-            'type': 'apiKey',
-            'name': 'Authorization',
-            'in': 'header',
-            'description': 'Format: Token <your_token>',
-        }
-    },
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Meal Management API',
+    'DESCRIPTION': 'Meal Management',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+    'TAGS': [
+            {'name': 'Authentication'},
+            {'name': 'Mess'},
+            {'name': 'Mess Member'},
+            {'name': 'Deposit'},
+            {'name': 'Meal'}
+        ],
 }

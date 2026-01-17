@@ -8,6 +8,9 @@ from rest_framework.permissions import IsAuthenticated
 from meal_manage.serializers.serializers_mess_member import MessSerializer, MessMemberSerializer, MesMemberWriteSerializer
 from meal_manage.models import Mess, MessMember
 
+from drf_spectacular.utils import extend_schema
+
+@extend_schema(tags=['Mess'])
 class MessView(mixins.ListModelMixin, mixins.CreateModelMixin,
                mixins.DestroyModelMixin, mixins.UpdateModelMixin, GenericViewSet):
     queryset = Mess.objects.all()
@@ -43,7 +46,7 @@ class MessView(mixins.ListModelMixin, mixins.CreateModelMixin,
 
 
 
-
+@extend_schema(tags=['Mess Member'])
 class AddMember(GenericViewSet, mixins.CreateModelMixin,
                 mixins.UpdateModelMixin, mixins.DestroyModelMixin):
     queryset = MessMember.objects.all()
@@ -62,6 +65,7 @@ class AddMember(GenericViewSet, mixins.CreateModelMixin,
         instance.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
+@extend_schema(tags=['Mess Member'])
 class Member(GenericViewSet, mixins.ListModelMixin):
     queryset = MessMember.objects.all()
     serializer_class = MessMemberSerializer
