@@ -14,6 +14,10 @@ class Mess(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    class Meta:
+        verbose_name = 'Mess'
+        verbose_name_plural = 'Mess'
+
 
 STATUS = [
     (0, 'Active'),
@@ -28,6 +32,9 @@ class MessMember(models.Model):
 
     class Meta:
         unique_together = ('mess', 'user')
+        verbose_name = 'Mess Member'
+        verbose_name_plural = 'Members'
+
 
 
 
@@ -73,6 +80,21 @@ class DailyMeal(models.Model):
         MinValueValidator(0),
         meal_validator
     ])
+    date = models.DateField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+
+class Cost(models.Model):
+    mess = models.ForeignKey(Mess, on_delete=models.CASCADE)
+    member = models.ForeignKey(
+        MessMember,
+        on_delete=models.SET_NULL,
+        related_name='cost',
+        null=True, blank=True
+    )
+    meal_cost = models.PositiveIntegerField()
+    meal_cost_details = models.CharField(blank=True)
     date = models.DateField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

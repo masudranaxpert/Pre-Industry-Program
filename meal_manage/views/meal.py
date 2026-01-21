@@ -1,6 +1,7 @@
 from rest_framework.viewsets import GenericViewSet
 from rest_framework import mixins
 from rest_framework.exceptions import ValidationError
+from rest_framework.permissions import IsAuthenticated
 
 from meal_manage.models import DailyMeal, MessMember
 from meal_manage.serializers.serializers_meal import MealSerializers
@@ -11,6 +12,7 @@ from drf_spectacular.utils import extend_schema
 class MealView(GenericViewSet, mixins.ListModelMixin, mixins.CreateModelMixin):
     queryset = DailyMeal.objects.all()
     serializer_class = MealSerializers
+    permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
         user = self.request.user
