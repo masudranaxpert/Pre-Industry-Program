@@ -10,6 +10,8 @@ from meal_manage.models import Mess, MessMember
 
 from drf_spectacular.utils import extend_schema
 
+from django.contrib.auth.models import User
+
 @extend_schema(tags=['Mess'])
 class MessView(mixins.ListModelMixin, mixins.CreateModelMixin,
                mixins.DestroyModelMixin, mixins.UpdateModelMixin, GenericViewSet):
@@ -64,6 +66,25 @@ class AddMember(GenericViewSet, mixins.CreateModelMixin,
             )
         instance.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+    def create(self, request, *args, **kwargs):
+        if not isinstance(request.data.get("user"), int):
+            try:
+                user_obj_id = User.objects.get(username=request.data.get("user")).id
+                request.data["user"] = user_obj_id
+            except User.DoesNotExist:
+                return Response("User does not exist", status=status.HTTP_404_NOT_FOUND)
+
+        user_obj = User.objects.get(id=request.data.get("user"))
+        if MessMember.objects.filter(user=user_obj).exists():
+            return Response("User already exists", status=status.HTTP_409_CONFLICT)
+
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        self.perform_create(serializer)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+
 
 @extend_schema(tags=['Mess Member'])
 class Member(GenericViewSet, mixins.ListModelMixin):

@@ -1,9 +1,8 @@
 from rest_framework import serializers
 from meal_manage.models import Deposit, MessMember
-from django.contrib.auth.models import User
 
 class DepositSerializers(serializers.ModelSerializer):
-    member = serializers.SerializerMethodField()
+    member_info = serializers.SerializerMethodField()
 
     class Meta:
         model = Deposit
@@ -19,9 +18,12 @@ class DepositSerializers(serializers.ModelSerializer):
             return attrs
         raise serializers.ValidationError("Not Permited")
 
-    def get_member(self, obj):
+    def get_member_info(self, obj):
+        # user = self.context.get('request').user
+        # member = MessMember.objects.filter(user=user).first()
         member = obj.member
         user = member.user
+
         return {
             "id": member.id,
             "first_name": user.first_name,

@@ -17,5 +17,5 @@ class CostView(generics.ListCreateAPIView):
         user = self.request.user
         member = MessMember.objects.filter(user=user).first()
         if member:
-            mess = Mess.objects.filter(member=member).first()
+            mess = member.mess
             serializer.save(mess=mess)

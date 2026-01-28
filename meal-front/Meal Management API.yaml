@@ -1,0 +1,689 @@
+openapi: 3.0.3
+info:
+  title: Meal Management API
+  version: 1.0.0
+  description: Meal Management
+paths:
+  /add-del-member/:
+    post:
+      operationId: add_del_member_create
+      tags:
+      - Mess Member
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MesMemberWrite'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/MesMemberWrite'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/MesMemberWrite'
+        required: true
+      security:
+      - tokenAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MesMemberWrite'
+          description: ''
+  /add-del-member/{id}/:
+    put:
+      operationId: add_del_member_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Mess Member.
+        required: true
+      tags:
+      - Mess Member
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MesMemberWrite'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/MesMemberWrite'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/MesMemberWrite'
+        required: true
+      security:
+      - tokenAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MesMemberWrite'
+          description: ''
+    patch:
+      operationId: add_del_member_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Mess Member.
+        required: true
+      tags:
+      - Mess Member
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedMesMemberWrite'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedMesMemberWrite'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedMesMemberWrite'
+      security:
+      - tokenAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MesMemberWrite'
+          description: ''
+    delete:
+      operationId: add_del_member_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Mess Member.
+        required: true
+      tags:
+      - Mess Member
+      security:
+      - tokenAuth: []
+      responses:
+        '204':
+          description: No response body
+  /cost/:
+    get:
+      operationId: cost_list
+      tags:
+      - Cost
+      security:
+      - tokenAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CostMember'
+          description: ''
+    post:
+      operationId: cost_create
+      tags:
+      - Cost
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CostMember'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/CostMember'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/CostMember'
+        required: true
+      security:
+      - tokenAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CostMember'
+          description: ''
+  /deposit/:
+    get:
+      operationId: deposit_list
+      tags:
+      - Deposit
+      security:
+      - tokenAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/DepositSerializers'
+          description: ''
+    post:
+      operationId: deposit_create
+      tags:
+      - Deposit
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DepositSerializers'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/DepositSerializers'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/DepositSerializers'
+        required: true
+      security:
+      - tokenAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DepositSerializers'
+          description: ''
+  /login/:
+    post:
+      operationId: login_create
+      tags:
+      - Authentication
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/AuthToken'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/AuthToken'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AuthToken'
+        required: true
+      security:
+      - tokenAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthToken'
+          description: ''
+  /meal/:
+    get:
+      operationId: meal_list
+      tags:
+      - Meal
+      security:
+      - tokenAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MealSerializers'
+          description: ''
+    post:
+      operationId: meal_create
+      tags:
+      - Meal
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MealSerializers'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/MealSerializers'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/MealSerializers'
+        required: true
+      security:
+      - tokenAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MealSerializers'
+          description: ''
+  /memberlist/:
+    get:
+      operationId: memberlist_list
+      tags:
+      - Mess Member
+      security:
+      - tokenAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MessMember'
+          description: ''
+  /mess/:
+    get:
+      operationId: mess_list
+      tags:
+      - Mess
+      security:
+      - tokenAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Mess'
+          description: ''
+    post:
+      operationId: mess_create
+      tags:
+      - Mess
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Mess'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Mess'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Mess'
+        required: true
+      security:
+      - tokenAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Mess'
+          description: ''
+  /mess/{id}/:
+    put:
+      operationId: mess_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Mess.
+        required: true
+      tags:
+      - Mess
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Mess'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Mess'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Mess'
+        required: true
+      security:
+      - tokenAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Mess'
+          description: ''
+    patch:
+      operationId: mess_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Mess.
+        required: true
+      tags:
+      - Mess
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedMess'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedMess'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedMess'
+      security:
+      - tokenAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Mess'
+          description: ''
+    delete:
+      operationId: mess_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Mess.
+        required: true
+      tags:
+      - Mess
+      security:
+      - tokenAuth: []
+      responses:
+        '204':
+          description: No response body
+  /mess_activity/:
+    get:
+      operationId: mess_activity_retrieve
+      tags:
+      - Mess Member
+      security:
+      - tokenAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /register/:
+    post:
+      operationId: register_create
+      tags:
+      - Authentication
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Registration'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Registration'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Registration'
+        required: true
+      security:
+      - tokenAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /user/:
+    get:
+      operationId: user_retrieve
+      tags:
+      - Authentication
+      security:
+      - tokenAuth: []
+      responses:
+        '200':
+          description: No response body
+components:
+  schemas:
+    AuthToken:
+      type: object
+      properties:
+        username:
+          type: string
+          writeOnly: true
+        password:
+          type: string
+          writeOnly: true
+        token:
+          type: string
+          readOnly: true
+      required:
+      - password
+      - token
+      - username
+    CostMember:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        meal_cost:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: 0
+          format: int64
+        meal_cost_details:
+          type: string
+        date:
+          type: string
+          format: date
+        mess:
+          type: integer
+          readOnly: true
+        member:
+          type: integer
+          nullable: true
+      required:
+      - date
+      - id
+      - meal_cost
+      - mess
+    DepositSerializers:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        member:
+          type: string
+          readOnly: true
+        deposit_amount:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: 0
+          format: int64
+        deposit_details:
+          type: string
+        date:
+          type: string
+          format: date
+        mess:
+          type: integer
+          readOnly: true
+      required:
+      - date
+      - deposit_amount
+      - id
+      - member
+      - mess
+    MealSerializers:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        breakfast:
+          type: number
+          format: double
+          maximum: 100
+          minimum: 0
+        lunch:
+          type: number
+          format: double
+          maximum: 100
+          minimum: 0
+        dinner:
+          type: number
+          format: double
+          maximum: 100
+          minimum: 0
+        date:
+          type: string
+          format: date
+        mess:
+          type: integer
+          readOnly: true
+        member:
+          type: integer
+          nullable: true
+      required:
+      - breakfast
+      - date
+      - dinner
+      - id
+      - lunch
+      - mess
+    MesMemberWrite:
+      type: object
+      properties:
+        mess:
+          type: integer
+        user:
+          type: integer
+        status:
+          $ref: '#/components/schemas/StatusEnum'
+      required:
+      - mess
+      - user
+    Mess:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        name:
+          type: string
+          maxLength: 100
+        manager:
+          type: integer
+          readOnly: true
+      required:
+      - id
+      - manager
+      - name
+    MessMember:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        mess:
+          type: integer
+        user:
+          $ref: '#/components/schemas/User'
+        status:
+          $ref: '#/components/schemas/StatusEnum'
+        role:
+          type: string
+          readOnly: true
+      required:
+      - id
+      - mess
+      - role
+      - user
+    PatchedMesMemberWrite:
+      type: object
+      properties:
+        mess:
+          type: integer
+        user:
+          type: integer
+        status:
+          $ref: '#/components/schemas/StatusEnum'
+    PatchedMess:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        name:
+          type: string
+          maxLength: 100
+        manager:
+          type: integer
+          readOnly: true
+    Registration:
+      type: object
+      properties:
+        first_name:
+          type: string
+          maxLength: 150
+        last_name:
+          type: string
+          maxLength: 150
+        username:
+          type: string
+          description: Required. 150 characters or fewer. Letters, digits and @/./+/-/_
+            only.
+          pattern: ^[\w.@+-]+$
+          maxLength: 150
+        email:
+          type: string
+          format: email
+          title: Email address
+          maxLength: 254
+        password:
+          type: string
+          writeOnly: true
+          maxLength: 128
+        password2:
+          type: string
+          writeOnly: true
+      required:
+      - password
+      - password2
+      - username
+    StatusEnum:
+      enum:
+      - 0
+      - 1
+      type: integer
+      description: |-
+        * `0` - Active
+        * `1` - Deactive
+    User:
+      type: object
+      properties:
+        username:
+          type: string
+          description: Required. 150 characters or fewer. Letters, digits and @/./+/-/_
+            only.
+          pattern: ^[\w.@+-]+$
+          maxLength: 150
+        email:
+          type: string
+          format: email
+          title: Email address
+          maxLength: 254
+      required:
+      - username
+  securitySchemes:
+    tokenAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Token-based authentication with required prefix "Token"
+tags:
+- name: Authentication
+- name: Mess
+- name: Mess Member
+- name: Deposit
+- name: Meal
+- name: Cost
