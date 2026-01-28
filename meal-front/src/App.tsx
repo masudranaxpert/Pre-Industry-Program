@@ -9,6 +9,7 @@ import Meals from './pages/Meals';
 import Deposits from './pages/Deposits';
 import Members from './pages/Members';
 import Costs from './pages/Costs';
+import Profile from './pages/Profile';
 import { authService } from './services/authService';
 
 const theme = createTheme({
@@ -83,6 +84,14 @@ function App() {
             element={
               <ProtectedRoute>
                 <Costs />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/profile"
+            element={
+              <ProtectedRoute>
+                <Profile />
               </ProtectedRoute>
             }
           />

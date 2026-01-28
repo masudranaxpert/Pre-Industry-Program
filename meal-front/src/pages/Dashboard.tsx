@@ -506,6 +506,60 @@ export default function Dashboard() {
                                 </Stack>
                             </Paper>
                         </Grid>
+
+                        {userData?.manager && (
+                            <Grid size={{ xs: 12, md: 6 }}>
+                                <Paper
+                                    sx={{
+                                        p: 3,
+                                        borderRadius: 3,
+                                        cursor: 'pointer',
+                                        transition: 'all 0.3s',
+                                        '&:hover': {
+                                            boxShadow: 4,
+                                            transform: 'translateY(-4px)',
+                                        },
+                                        background: 'linear-gradient(135deg, #fff1f2 0%, #ffe4e6 100%)',
+                                    }}
+                                    onClick={async () => {
+                                        if (window.confirm("Are you sure you want to reset all data for this month? This action cannot be undone.")) {
+                                            try {
+                                                await messService.resetMonth();
+                                                alert("Month reset successfully!");
+                                                fetchData();
+                                            } catch (error) {
+                                                console.error('Failed to reset month:', error);
+                                                alert('Failed to reset month');
+                                            }
+                                        }
+                                    }}
+                                >
+                                    <Stack direction="row" spacing={2} alignItems="center">
+                                        <Box
+                                            sx={{
+                                                width: 48,
+                                                height: 48,
+                                                borderRadius: '50%',
+                                                bgcolor: '#fecaca',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'center',
+                                            }}
+                                        >
+                                            <Logout sx={{ color: '#dc2626' }} />
+                                        </Box>
+                                        <Box>
+                                            <Typography variant="h6" sx={{ fontWeight: 600, color: '#991b1b' }}>
+                                                Reset Month
+                                            </Typography>
+                                            <Typography variant="body2" sx={{ color: '#ef4444' }}>
+                                                Reset all meal and deposit data
+                                            </Typography>
+                                        </Box>
+                                    </Stack>
+                                </Paper>
+                            </Grid>
+                        )}
                     </Grid>
                 )}
             </Container>

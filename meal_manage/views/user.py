@@ -3,7 +3,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.views import APIView
 from rest_framework.response import Response
 
-from meal_manage.models import Mess, DailyMeal, Deposit, MessMember
+from meal_manage.models import Mess, DailyMeal, Deposit, MessMember, Cost
 from meal_manage.serializers.serializers_user import UserSerializer
 
 from django.db.models import Sum, F
@@ -19,13 +19,18 @@ class UserView(APIView):
 
     def get(self, request):
         user = request.user
-        mess_obj = Mess.objects.filter(manager=user)
+        try:
+            mess_obj = Mess.objects.filter(manager=user)
+        except Mess.DoesNotExist:
+            mess_obj = None
+
         mess_member = MessMember.objects.filter(user=user).first()
         user_serializer = UserSerializer(instance=user)
 
         deposit_total = Deposit.objects.filter(member=mess_member).aggregate(total=Coalesce(Sum('deposit_amount'), 0))['total']
+        cost = Cost.objects.aggregate(total=Coalesce(Sum('meal_cost'), 0))['total']
         mess_meal_total = DailyMeal.objects.filter(member=mess_member).aggregate(total=Coalesce(Sum(F('breakfast') + F('lunch') + F('dinner')), 0.0))['total']
-        mess_meal_rate = deposit_total // mess_meal_total if mess_meal_total > 0 else 0
+        mess_meal_rate = cost // mess_meal_total if mess_meal_total > 0 else 0
         mess_meal_cost = mess_meal_rate * mess_meal_total if mess_meal_total > 0 else 0
         balance = deposit_total - mess_meal_cost if mess_meal_cost > 0 else 0
 

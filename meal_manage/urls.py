@@ -7,6 +7,7 @@ from meal_manage.views.meal import MealView
 from meal_manage.views.cost import CostView
 from meal_manage.views.member_activity import MemberActivityView
 from meal_manage.views.user import UserView, UserInfoView
+from meal_manage.views.reset import Reset
 
 router = DefaultRouter()
 router.register(r"mess", MessView, basename="mess")
@@ -25,4 +26,5 @@ urlpatterns +=[
     re_path('cost/', CostView.as_view(), name='cost'),
     re_path('mess_activity/', MemberActivityView.as_view(), name='mess_activity'),
     re_path('user/', UserView.as_view(), name='user_activity'),
+    re_path('reset/', Reset.as_view(), name='reset'),
 ]

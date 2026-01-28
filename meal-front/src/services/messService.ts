@@ -134,4 +134,8 @@ export const messService = {
         const response = await api.post('/cost/', data);
         return response.data;
     },
+
+    resetMonth: async () => {
+        await api.get('/reset/');
+    },
 };

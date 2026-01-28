@@ -183,6 +183,7 @@ export default function Members() {
                                         <TableCell sx={{ color: 'white', fontWeight: 600 }}>Email</TableCell>
                                         <TableCell sx={{ color: 'white', fontWeight: 600 }}>Role</TableCell>
                                         <TableCell align="center" sx={{ color: 'white', fontWeight: 600 }}>Status</TableCell>
+                                        {isManager && <TableCell align="center" sx={{ color: 'white', fontWeight: 600 }}>Action</TableCell>}
                                     </TableRow>
                                 </TableHead>
                                 <TableBody>
@@ -221,6 +222,27 @@ export default function Members() {
                                                         color={member.status ? 'success' : 'error'}
                                                     />
                                                 </TableCell>
+                                                {isManager && (
+                                                    <TableCell align="center">
+                                                        <IconButton
+                                                            onClick={async () => {
+                                                                if (window.confirm(`Are you sure you want to remove ${member.user.username}?`)) {
+                                                                    try {
+                                                                        await messService.deleteMember(member.id);
+                                                                        setSuccess('Member removed successfully');
+                                                                        fetchData();
+                                                                    } catch (err) {
+                                                                        console.error(err);
+                                                                        setError('Failed to remove member');
+                                                                    }
+                                                                }
+                                                            }}
+                                                            color="error"
+                                                        >
+                                                            <PersonRemove />
+                                                        </IconButton>
+                                                    </TableCell>
+                                                )}
                                             </TableRow>
                                         ))
                                     )}

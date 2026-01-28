@@ -18,6 +18,8 @@ export interface UserData {
     user: {
         username: string;
         email: string;
+        first_name?: string;
+        last_name?: string;
     };
     manager?: boolean;
     mess_name?: string | { name: string };
